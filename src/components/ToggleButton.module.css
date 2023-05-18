@@ -1,0 +1,45 @@
+.toggleButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: transparent;
+  border: none;
+}
+
+.darkModeButton {
+  color: #f9fafb;
+}
+
+.lightModeButton {
+  color: #000000;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  border-radius: 17px;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.sliderDark {
+  background-color: #374151;
+}
+
+.sliderLight {
+  background-color: #f7fafc;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}

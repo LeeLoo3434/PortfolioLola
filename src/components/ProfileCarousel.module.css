@@ -1,18 +1,30 @@
+:root {
+  --bg-color: #f7fafc; /* default light mode background color */
+  --card-bg-color: #ffffff; /* default light mode card background color */
+  --text-color: #000000; /* default light mode text color */
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2937; /* dark mode background color */
+  --card-bg-color: #374151; /* dark mode card background color */
+  --text-color: #f9fafb; /* dark mode text color */
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f7fafc;
+  background-color: var(--bg-color);
 }
 
 .polaroid {
   position: relative;
   width: 300px;
-  min-height: 400px; /* Updated: Increase the minimum height */
+  min-height: 400px;
   padding: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
@@ -22,20 +34,64 @@
   object-fit: cover;
 }
 
-.text-container {
+.textContainer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #ffffff;
+  background-color: var(--card-bg-color);
   padding: 1rem;
-  display: flex; /* Added: Make the container a flex container */
-  justify-content: center; /* Added: Center the text horizontally */
-  align-items: center; /* Added: Center the text vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .text {
-  font-family: "Permanent Marker", cursive; /* Added: Use the "Permanent Marker" font */
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.name {
   font-size: 1.5rem;
-  color: #000000;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.markerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-right: 0.5rem;
+}
+
+.location {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.container.dark {
+  --bg-color: #1f2937; /* dark mode background color */
+  --card-bg-color: #374151; /* dark mode card background color */
+  --text-color: #f9fafb; /* dark mode text color */
+}
+
+.container.light {
+  --bg-color: #f7fafc; /* light mode background color */
+  --card-bg-color: #ffffff; /* light mode card background color */
+  --text-color: #000000; /* light mode text color */
 }

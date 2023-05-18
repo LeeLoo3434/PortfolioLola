@@ -1,14 +1,25 @@
 import React from 'react';
-import './styles.css';
 import Dashboard from './pages/Dashboard';
+import { ThemeProvider, ThemeContext } from './ThemeContext';
+import ToggleButton from './components/ToggleButton';
+import ProfileCarousel from './components/ProfileCarousel';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 const App = () => {
-  const name = "Lola Russell";
-
   return (
-    <div className="App">
-      <Dashboard />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Dashboard />
+        <ThemeContext.Consumer>
+          {({ isDarkMode, toggleTheme }) => (
+            <>
+              <ToggleButton />
+              {isDarkMode && <ProfileCarousel />}
+            </>
+          )}
+        </ThemeContext.Consumer>
+      </div>
+    </ThemeProvider>
   );
 }
 

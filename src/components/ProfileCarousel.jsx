@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import cali from "../images/cali.jpeg";
 import lolaaspen from "../images/lolaaspen.jpeg";
 import ramen from "../images/gay.jpeg";
 import styles from "./ProfileCarousel.module.css";
+import { ThemeContext } from "../ThemeContext";
 
 const images = [cali, lolaaspen, ramen];
 
 const ProfileCarousel = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const { isDarkMode } = useContext(ThemeContext);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,8 +19,17 @@ const ProfileCarousel = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const containerClassName = isDarkMode
+    ? `${styles.container} ${styles.dark}`
+    : `${styles.container} ${styles.light}`;
+
+  const nameClassName = isDarkMode ? styles.nameDark : styles.nameLight;
+  const roleClassName = isDarkMode ? styles.roleDark : styles.roleLight;
+  const markerClassName = isDarkMode ? styles.markerDark : styles.markerLight;
+  const locationClassName = isDarkMode ? styles.locationDark : styles.locationLight;
+
   return (
-    <div className={styles.container}>
+    <div className={containerClassName}>
       <div className={styles.polaroid}>
         <img
           src={images[currentImage]}
@@ -26,7 +37,16 @@ const ProfileCarousel = () => {
           className={styles.image}
         />
         <div className={styles.textContainer}>
-          <div className={styles.text}>Lola Russell</div>
+          <div className={styles.nameContainer}>
+            <div className={`${styles.text} ${nameClassName}`}>Lola Russell</div>
+            <div className={`${styles.text} ${roleClassName}`}>Software Engineer</div>
+          </div>
+          <div className={styles.locationContainer}>
+            <div className={styles.markerContainer}>
+              <div className={`${styles.text} ${markerClassName}`}>📍</div>
+              <div className={`${styles.text} ${locationClassName}`}>Los Angeles</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -34,3 +54,4 @@ const ProfileCarousel = () => {
 };
 
 export default ProfileCarousel;
+
