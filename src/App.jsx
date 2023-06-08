@@ -1,8 +1,7 @@
 import React from 'react';
 import Dashboard from './pages/Dashboard';
-import { ThemeProvider, ThemeContext } from './ThemeContext';
+import { ThemeProvider } from './ThemeContext';
 import ToggleButton from './components/ToggleButton';
-import ProfileCarousel from './components/ProfileCarousel';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 const App = () => {
@@ -10,17 +9,10 @@ const App = () => {
     <ThemeProvider>
       <div className="App">
         <Dashboard />
-        <ThemeContext.Consumer>
-          {({ isDarkMode, toggleTheme }) => (
-            <>
-              <ToggleButton />
-              {isDarkMode && <ProfileCarousel />}
-            </>
-          )}
-        </ThemeContext.Consumer>
+        <ToggleButton />
       </div>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

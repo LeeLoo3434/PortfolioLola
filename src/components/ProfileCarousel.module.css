@@ -1,14 +1,4 @@
-:root {
-  --bg-color: #f7fafc; /* default light mode background color */
-  --card-bg-color: #ffffff; /* default light mode card background color */
-  --text-color: #000000; /* default light mode text color */
-}
 
-[data-theme="dark"] {
-  --bg-color: #1f2937; /* dark mode background color */
-  --card-bg-color: #374151; /* dark mode card background color */
-  --text-color: #f9fafb; /* dark mode text color */
-}
 
 .container {
   display: flex;
@@ -84,14 +74,3 @@
   font-weight: normal;
 }
 
-.container.dark {
-  --bg-color: #1f2937; /* dark mode background color */
-  --card-bg-color: #374151; /* dark mode card background color */
-  --text-color: #f9fafb; /* dark mode text color */
-}
-
-.container.light {
-  --bg-color: #f7fafc; /* light mode background color */
-  --card-bg-color: #ffffff; /* light mode card background color */
-  --text-color: #000000; /* light mode text color */
-}

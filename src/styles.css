@@ -2,40 +2,115 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@keyframes rainbow {
-    0% {
-        color: red;
-    }
-
-    14% {
-        color: orange;
-    }
-
-    28% {
-        color: yellow;
-    }
-
-    42% {
-        color: green;
-    }
-
-    57% {
-        color: blue;
-    }
-
-    71% {
-        color: indigo;
-    }
-
-    85% {
-        color: violet;
-    }
-
-    100% {
-        color: red;
-    }
+:root {
+    /* Default light mode colors */
+    --bg-color: #f7fafc;
+    --card-bg-color: #ffffff;
+    --text-color: #000000;
 }
 
-.animate-rainbow {
-    animation: rainbow 4s linear infinite;
+[data-theme="dark"] {
+    /* Dark mode colors */
+    --bg-color: #1f2937;
+    --card-bg-color: #374151;
+    --text-color: #f9fafb;
+}
+
+/* Apply the custom properties to the appropriate elements */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+/* Rest of your styles */
+
+/* Styles specific to ProfileCarousel */
+.container .polaroid {
+    position: relative;
+    width: 300px;
+    min-height: 400px;
+    padding: 1rem;
+    background-color: var(--card-bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.container .textContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--card-bg-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .text {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.container .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.container .role {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.container .markerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .marker {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-right: 0.5rem;
+}
+
+.container .location {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+
+.button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 9999px;
+    /* Make the button rounded */
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.button.active {
+    background-color: var(--button-active-bg-color);
+    /* Darken the background color when the button is active */
 }

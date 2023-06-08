@@ -1,3 +1,5 @@
+/* ToggleButton.module.css */
+
 .toggleButton {
   position: fixed;
   top: 20px;
@@ -9,11 +11,11 @@
 }
 
 .darkModeButton {
-  color: #f9fafb;
+  color: var(--text-color-dark); /* Use the dark mode text color */
 }
 
 .lightModeButton {
-  color: #000000;
+  color: var(--text-color-light); /* Use the light mode text color */
 }
 
 .slider {
@@ -22,16 +24,16 @@
   width: 60px;
   height: 34px;
   border-radius: 17px;
-  background-color: #ccc;
+  background-color: var(--bg-color); /* Use the default background color */
   transition: background-color 0.3s;
 }
 
-.sliderDark {
-  background-color: #374151;
+.slider.dark {
+  background-color: var(--card-bg-color-dark); /* Use the dark mode card background color */
 }
 
-.sliderLight {
-  background-color: #f7fafc;
+.slider.light {
+  background-color: var(--card-bg-color-light); /* Use the light mode card background color */
 }
 
 .icon {

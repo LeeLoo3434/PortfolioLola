@@ -1,9 +1,14 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#FF0000', // Example custom color
+      },
+      borderRadius: {
+        xl: '1rem', // Example custom border radius
+      },
+    },
   },
   plugins: [],
-}
-
+};
