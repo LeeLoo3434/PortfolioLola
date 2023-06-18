@@ -1,20 +1,41 @@
 .text {
-    font-family: "Permanent Marker", cursive;
-    font-size: 1.2rem;
-    white-space: pre-line;
-    text-align: center;
-    margin: 1rem 0;
-  }
-  
-  .fontLight {
-    color: var(--text-color);
-  }
-  
-  .fontDark {
-    color: var(--text-color-dark);
-  }
-  
-  .longBio {
-    font-size: 0.9rem; /* Adjust the font size as desired */
-  }
-  
+  font-family: "Arial", sans-serif; /* Replace with your preferred font */
+  font-size: 1.2rem;
+  white-space: pre-line;
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 600px; /* Adjust the max-width as desired */
+}
+
+.fontLight {
+  color: var(--text-color);
+}
+
+.fontDark {
+  color: var(--text-color-dark);
+}
+
+.longBio {
+  font-size: 0.9rem; /* Adjust the font size as desired */
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.button.active {
+  background-color: var(--button-active-bg-color);
+}

@@ -1,7 +1,6 @@
-
-
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -10,8 +9,8 @@
 
 .polaroid {
   position: relative;
-  width: 300px;
-  min-height: 400px;
+  width: 250px; /* Adjust the width to make the carousel smaller */
+  height: 350px; /* Adjust the height to maintain the aspect ratio */
   padding: 1rem;
   background-color: var(--card-bg-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
@@ -73,4 +72,3 @@
   font-size: 1rem;
   font-weight: normal;
 }
-
