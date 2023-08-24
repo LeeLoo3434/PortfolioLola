@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../ThemeContext";
+import React, { useContext } from 'react';
+import { ThemeContext } from '../ThemeContext';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import styles from "./ToggleButton.module.css";
@@ -11,6 +11,10 @@ const ToggleButton = () => {
     toggleTheme();
   };
 
+  const buttonStyles = {
+    border: isDarkMode ? '2px solid #fff' : '2px solid #000', // Change border color based on theme
+  };
+
   const buttonClassName = isDarkMode
     ? `${styles.toggleButton} ${styles.darkModeButton}`
     : `${styles.toggleButton} ${styles.lightModeButton}`;
@@ -18,14 +22,13 @@ const ToggleButton = () => {
   const sliderClassName = isDarkMode ? styles.sliderDark : styles.sliderLight;
 
   return (
-    <div className={buttonClassName} onClick={handleToggle}>
+    <div className={buttonClassName} onClick={handleToggle} style={buttonStyles}>
       <div className={styles.slider}>
         <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className={styles.icon} />
       </div>
-      <div className={sliderClassName}></div>
+      <div className={`${sliderClassName} ${isDarkMode ? '' : styles.lightModeBorder}`}></div>
     </div>
   );
 };
 
 export default ToggleButton;
-

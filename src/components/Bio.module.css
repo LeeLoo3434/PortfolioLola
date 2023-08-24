@@ -1,9 +1,9 @@
 .text {
   font-family: "Arial", sans-serif; /* Replace with your preferred font */
-  font-size: 1.2rem;
+  font-size: 1rem; /* Adjust the font size as desired */
   white-space: pre-line;
   text-align: center;
-  margin: 1rem auto;
+  margin: auto;
   max-width: 600px; /* Adjust the max-width as desired */
 }
 
@@ -16,7 +16,7 @@
 }
 
 .longBio {
-  font-size: 0.9rem; /* Adjust the font size as desired */
+  font-size: 0.8rem; /* Adjust the font size as desired */
 }
 
 .buttonGroup {

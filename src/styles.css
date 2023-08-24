@@ -20,19 +20,72 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    margin: 0;
 }
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between; /* Space evenly between children */
+    align-items: flex-start; /* Align children to the top */
     height: 100vh;
+    padding: 2rem; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the width/height */
     background-color: var(--bg-color);
 }
+
+/* Adjust the card styling */
+.card {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    width: 40%; /* Reduce card width for smaller size */
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden;
+}
+
+/* Adjust the textContainer styling */
+.textContainer {
+    /*
+    Summary:
+    The `.textContainer` class is responsible for styling a container that holds text content. 
+    It sets the background color, padding, margin, border radius, and text alignment for the container.
+    */
+
+    /* Set the background color of the container to the value of the `--card-bg-color` custom property */
+    background-color: var(--card-bg-color);
+
+    /* Add padding of 1rem to the container */
+    padding: 1rem;
+
+    /* Add a top margin of 1rem to create space above the container */
+    margin-top: 1rem;
+
+    /* Apply a border radius of 10px to give the container rounded corners */
+    border-radius: 10px;
+
+    /* Align the text content inside the container to the center */
+    text-align: center;
+}
+
+/* Adjust text styles */
+.text {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1rem; /* Decrease font size for smaller text */
+    color: var(--text-color);
+    margin: 0.5rem 0; /* Add vertical margin for spacing */
+}
+
+
 
 .card {
     background-color: var(--card-bg-color);
     color: var(--text-color);
+    width: 40%; /* Reduce card width for smaller size */
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden;
 }
 
 /* Rest of your styles */

@@ -1,27 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import ToggleButton from './components/ToggleButton';
-import { ThemeProvider } from './ThemeContext';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+
 import Dashboard from './pages/Dashboard';
-import ProjectsPage from './pages/ProjectsPage';
-import ProjectDetailsPage from './pages/ProjectDetailsPage'; // Assuming you create this page
+import ProjectPage from './pages/ProjectPage';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <Router>
-        <div className="App">
-          <Navigation />
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route exact path="/projects" component={ProjectsPage} />
-            <Route path="/projects/:id" component={ProjectDetailsPage} />
-          </Switch>
-          <ToggleButton />
-        </div>
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <div className="App">
+        {/* ... */}
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/projects" element={<ProjectPage />} />
+          {/* Add other routes here */}
+          {/* Use Navigate to handle unmatched routes */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+        {/* ... */}
+      </div>
+    </Router>
   );
 };
 

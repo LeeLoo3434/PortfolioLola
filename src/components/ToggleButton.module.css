@@ -1,4 +1,18 @@
 /* ToggleButton.module.css */
+.toggleButtonContainer {
+  border: 2px solid var(--border-color); /* Use a CSS variable for the border color */
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.lightModeContainer {
+  --border-color: #000; /* Dark border for light mode */
+}
+
+.darkModeContainer {
+  --border-color: #fff; /* Light border for dark mode */
+}
+
 
 .toggleButton {
   position: fixed;
@@ -45,3 +59,5 @@
   font-weight: bold;
   transition: transform 0.3s;
 }
+
+
