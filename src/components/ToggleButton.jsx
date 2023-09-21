@@ -12,7 +12,8 @@ const ToggleButton = () => {
   };
 
   const buttonStyles = {
-    border: isDarkMode ? '2px solid #fff' : '2px solid #000', // Change border color based on theme
+    // Change border color based on theme
+    border: 'none', // Remove the border
   };
 
   const buttonClassName = isDarkMode

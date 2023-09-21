@@ -1,3 +1,4 @@
+// ProfileCarousel.js
 import React, { useContext } from 'react';
 import cali from "../images/cali.jpeg";
 import lolaaspen from "../images/lolaaspen.jpeg";
@@ -29,7 +30,7 @@ const ProfileCarousel = () => {
   const locationClassName = isDarkMode ? styles.locationDark : styles.locationLight;
 
   return (
-    <div className={containerClassName}>
+    <div className={`md:w-1/2 ${containerClassName}`}> {/* Adjust the container class */}
       <div className={styles.polaroid}>
         <img
           src={images[currentImage]}
@@ -37,11 +38,11 @@ const ProfileCarousel = () => {
           className={styles.image}
         />
         <div className={styles.textContainer}>
-          <div className={styles.nameContainer}>
+          <div className={styles.name}>
             <div className={`${styles.text} ${nameClassName}`}>Lola Russell</div>
             <div className={`${styles.text} ${roleClassName}`}>Software Engineer</div>
           </div>
-          <div className={styles.locationContainer}>
+          <div className={styles.location}>
             <div className={styles.markerContainer}>
               <div className={`${styles.text} ${markerClassName}`}>📍</div>
               <div className={`${styles.text} ${locationClassName}`}>Los Angeles</div>

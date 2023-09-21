@@ -30,7 +30,7 @@ const ProjectPage = () => {
       <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem' }}>
         <ToggleButton onClick={toggleDarkMode} />
       </div>
-      <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Projects</h1>
+      <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign:'center'}}>Projects</h1>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1rem' }}>
         {projects.map((project, index) => (
           <div

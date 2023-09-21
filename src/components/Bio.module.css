@@ -1,10 +1,15 @@
-.text {
-  font-family: "Arial", sans-serif; /* Replace with your preferred font */
-  font-size: 1rem; /* Adjust the font size as desired */
-  white-space: pre-line;
+/* Bio.module.css */
+.textCenter {
   text-align: center;
-  margin: auto;
-  max-width: 600px; /* Adjust the max-width as desired */
+}
+
+.text {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  white-space: pre-line;
+  /* Remove margin-top to fix the vertical positioning */
+  /* margin-top: 3rem; Remove this line */
+  max-width: 600px;
 }
 
 .fontLight {
@@ -16,13 +21,18 @@
 }
 
 .longBio {
-  font-size: 0.8rem; /* Adjust the font size as desired */
+  font-size: 0.8rem;
+  max-height: 300px;
+  overflow-y: auto;
+  /* Add padding to the long bio for better readability */
+  padding: 1rem; /* Adjust as needed */
 }
 
 .buttonGroup {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  /* Adjust margin-top to position the button group */
+  margin-top: 1rem; /* Adjust this value as needed */
 }
 
 .button {

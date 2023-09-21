@@ -7,6 +7,9 @@
     --bg-color: #f7fafc;
     --card-bg-color: #ffffff;
     --text-color: #000000;
+    --button-bg-color: #007bff; /* Define your button colors */
+    --button-text-color: #ffffff;
+    --button-active-bg-color: #0056b3;
 }
 
 [data-theme="dark"] {
@@ -14,6 +17,9 @@
     --bg-color: #1f2937;
     --card-bg-color: #374151;
     --text-color: #f9fafb;
+    --button-bg-color: #007bff; /* Define your dark mode button colors */
+    --button-text-color: #ffffff;
+    --button-active-bg-color: #0056b3;
 }
 
 /* Apply the custom properties to the appropriate elements */
@@ -25,87 +31,33 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-between; /* Space evenly between children */
-    align-items: flex-start; /* Align children to the top */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    padding: 2rem; /* Add padding for spacing */
-    box-sizing: border-box; /* Include padding in the width/height */
+    padding: 2rem;
+    box-sizing: border-box;
     background-color: var(--bg-color);
 }
 
-/* Adjust the card styling */
-.card {
+/* Left Column (ProfileCarousel) styles */
+.left-column {
+    width: 250px;
+    height: 350px;
     background-color: var(--card-bg-color);
-    color: var(--text-color);
-    width: 40%; /* Reduce card width for smaller size */
-    padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px; /* Add rounded corners */
     overflow: hidden;
 }
 
-/* Adjust the textContainer styling */
-.textContainer {
-    /*
-    Summary:
-    The `.textContainer` class is responsible for styling a container that holds text content. 
-    It sets the background color, padding, margin, border radius, and text alignment for the container.
-    */
-
-    /* Set the background color of the container to the value of the `--card-bg-color` custom property */
+/* Right Column (Bio) styles */
+.right-column {
+    flex: 1;
     background-color: var(--card-bg-color);
-
-    /* Add padding of 1rem to the container */
-    padding: 1rem;
-
-    /* Add a top margin of 1rem to create space above the container */
-    margin-top: 1rem;
-
-    /* Apply a border radius of 10px to give the container rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-
-    /* Align the text content inside the container to the center */
-    text-align: center;
 }
 
-/* Adjust text styles */
-.text {
-    font-family: "Permanent Marker", cursive;
-    font-size: 1rem; /* Decrease font size for smaller text */
-    color: var(--text-color);
-    margin: 0.5rem 0; /* Add vertical margin for spacing */
-}
-
-
-
-.card {
-    background-color: var(--card-bg-color);
-    color: var(--text-color);
-    width: 40%; /* Reduce card width for smaller size */
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px; /* Add rounded corners */
-    overflow: hidden;
-}
-
-/* Rest of your styles */
-
-/* Styles specific to ProfileCarousel */
-.container .polaroid {
-    position: relative;
-    width: 300px;
-    min-height: 400px;
-    padding: 1rem;
-    background-color: var(--card-bg-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-}
-
-.container .textContainer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+/* Adjust the Bio section */
+.textContainer {
     background-color: var(--card-bg-color);
     padding: 1rem;
     display: flex;
@@ -115,55 +67,25 @@ body {
     text-align: center;
 }
 
-.container .text {
-    font-family: "Permanent Marker", cursive;
-    font-size: 1.2rem;
-    color: var(--text-color);
-    white-space: nowrap;
-}
-
-.container .name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.container .role {
-    font-size: 1rem;
-    font-weight: normal;
-    margin-bottom: 0.5rem;
-}
-
-.container .markerContainer {
+/* Reduce margin above buttons */
+.buttonGroup {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top: .5rem; /* Adjust this value as needed */
 }
 
-.container .marker {
-    font-size: 1rem;
-    font-weight: normal;
-    margin-right: 0.5rem;
-}
-
-.container .location {
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-
+/* Button styles */
 .button {
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 9999px;
-    /* Make the button rounded */
-    margin-right: 0.5rem;
+    margin-top: 0.5rem;
     transition: background-color 0.3s;
 }
 
 .button.active {
     background-color: var(--button-active-bg-color);
-    /* Darken the background color when the button is active */
 }
