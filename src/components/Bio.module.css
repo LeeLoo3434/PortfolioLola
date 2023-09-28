@@ -1,4 +1,10 @@
 /* Bio.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .textCenter {
   text-align: center;
 }
@@ -33,6 +39,7 @@
   justify-content: center;
   /* Adjust margin-top to position the button group */
   margin-top: 1rem; /* Adjust this value as needed */
+  margin-bottom: 1rem; /* Add margin to create space between bio text and buttons */
 }
 
 .button {

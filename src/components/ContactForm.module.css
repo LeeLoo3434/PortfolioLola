@@ -1,0 +1,42 @@
+/* ContactForm.module.css */
+
+/* Style the form container */
+.contactFormContainer {
+    background-color: var(--background-color);
+    /* Use your background color */
+    color: var(--text-color);
+    /* Use your text color */
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Style the form inputs */
+.contactFormContainer input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    /* Use your border color */
+    border-radius: 3px;
+}
+
+/* Style the form button */
+.contactFormContainer button[type="submit"] {
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    /* Blue gradient */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Style the form button on hover */
+.contactFormContainer button[type="submit"]:hover {
+    background: linear-gradient(to bottom, #0056b3, #003a73);
+    /* Darker blue gradient */
+}

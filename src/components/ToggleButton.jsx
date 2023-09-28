@@ -11,23 +11,15 @@ const ToggleButton = () => {
     toggleTheme();
   };
 
-  const buttonStyles = {
-    // Change border color based on theme
-    border: 'none', // Remove the border
-  };
-
   const buttonClassName = isDarkMode
     ? `${styles.toggleButton} ${styles.darkModeButton}`
     : `${styles.toggleButton} ${styles.lightModeButton}`;
 
-  const sliderClassName = isDarkMode ? styles.sliderDark : styles.sliderLight;
-
   return (
-    <div className={buttonClassName} onClick={handleToggle} style={buttonStyles}>
+    <div className={buttonClassName} onClick={handleToggle}>
       <div className={styles.slider}>
         <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className={styles.icon} />
       </div>
-      <div className={`${sliderClassName} ${isDarkMode ? '' : styles.lightModeBorder}`}></div>
     </div>
   );
 };

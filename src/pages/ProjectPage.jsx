@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import ToggleButton from '../components/ToggleButton';
 import { ThemeContext } from '../ThemeContext';
+import Navbar from '../components/Navbar'; // Import the Navbar component
 import '../styles.css';
 
 const projects = [
@@ -27,10 +28,11 @@ const ProjectPage = () => {
 
   return (
     <div style={{ backgroundColor: isDarkMode ? '#1f2937' : '#f7fafc', color: isDarkMode ? '#f9fafb' : '#000000' }}>
+      <Navbar /> {/* Include the Navbar component */}
       <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem' }}>
         <ToggleButton onClick={toggleDarkMode} />
       </div>
-      <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign:'center'}}>Projects</h1>
+      <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center' }}>Projects</h1>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1rem' }}>
         {projects.map((project, index) => (
           <div
@@ -65,7 +67,6 @@ const ProjectPage = () => {
               >
                 View Live Project
               </a>
-              
             </div>
           </div>
         ))}

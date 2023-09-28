@@ -1,19 +1,12 @@
 /* ToggleButton.module.css */
 
-
-
-
 .toggleButton {
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 10px; /* Adjust the top value as needed to keep it on the navbar */
   right: 20px;
   cursor: pointer;
   z-index: 1000;
-  background-color: transparent;
-  border: none;
 }
-
-
 
 .lightModeButton {
   color: var(--text-color-light); /* Use the light mode text color */
@@ -46,5 +39,3 @@
   font-weight: bold;
   transition: transform 0.3s;
 }
-
-

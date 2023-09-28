@@ -2,8 +2,8 @@
 
 .polaroid {
   position: relative;
-  width: 250px;
-  height: 350px;
+  width: 300px;
+  height: 400px;
   padding: 1rem;
   background-color: var(--card-bg-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);

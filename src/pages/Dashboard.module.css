@@ -1,6 +1,73 @@
-/* DashboardComponent.module.css or DashboardComponent.css */
-.custom-container {
-    /* Reset padding and margin to zero */
-    padding: 0;
-    margin: 0;
+/* Dashboard.module.css */
+
+/* Default styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    /* Add a little space under the bio */
+}
+
+.exploreButtonContainer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Styling for the Explore Projects button */
+.exploreButton {
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    /* Blue gradient */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* Circular button */
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+/* Add spacing between the icons */
+.iconSpacer {
+    margin-right: 20px;
+    /* Adjust the spacing as needed */
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+
+    /* Adjust layout for tablets and larger screens */
+    .container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .column {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .exploreButtonContainer {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 1024px) {
+
+    /* Adjust layout for larger screens */
+    .container {
+        padding: 10rem !important;
+    }
 }
