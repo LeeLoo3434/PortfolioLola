@@ -1,5 +1,4 @@
-// ProfileCarousel.js
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import cali from "../images/cali.jpeg";
 import lolaaspen from "../images/lolaaspen.jpeg";
 import ramen from "../images/gay.jpeg";
@@ -8,11 +7,11 @@ import { ThemeContext } from '../ThemeContext';
 
 const images = [cali, lolaaspen, ramen];
 
-const ProfileCarousel = () => {
+export default function ProfileCarousel() {
   const { isDarkMode } = useContext(ThemeContext);
-  const [currentImage, setCurrentImage] = React.useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 3000);
@@ -30,11 +29,11 @@ const ProfileCarousel = () => {
   const locationClassName = isDarkMode ? styles.locationDark : styles.locationLight;
 
   return (
-    <div className={`md:w-1/2 ${containerClassName}`}> {/* Adjust the container class */}
+    <div className={`md:w-1/2 ${containerClassName} ${styles.profileCarouselContainer}`}>
       <div className={styles.polaroid}>
         <img
           src={images[currentImage]}
-          alt={`Image ${currentImage}`}
+          alt=""
           className={styles.image}
         />
         <div className={styles.textContainer}>
@@ -52,6 +51,4 @@ const ProfileCarousel = () => {
       </div>
     </div>
   );
-};
-
-export default ProfileCarousel;
+}

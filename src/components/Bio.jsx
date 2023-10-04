@@ -28,10 +28,17 @@ const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick }) => {
           </button>
         </div>
         <div className={styles.bioContent}>
-          <h2>{showShortBio ? "" : ""}</h2>
-          <p className={`${styles.text} ${textClassName} ${showShortBio ? "" : styles.longBio}`}>
-            {bioContent}
-          </p>
+          {showShortBio ? (
+            <>
+              <h2>Short Bio</h2>
+              <p className={`${styles.text} ${textClassName}`}>{bioContent}</p>
+            </>
+          ) : (
+            <>
+              <h2>Long Bio</h2>
+              <p className={`${styles.text} ${textClassName}`}>{bioContent}</p>
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -39,5 +46,4 @@ const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick }) => {
 };
 
 export default Bio;
-
 

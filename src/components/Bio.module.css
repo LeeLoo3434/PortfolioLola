@@ -1,21 +1,18 @@
-/* Bio.module.css */
+/* Default styles for larger screens (e.g., desktop) */
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Change flex-direction to column */
   align-items: center;
+  justify-content: center;
   height: 100%;
-}
-.textCenter {
-  text-align: center;
 }
 
 .text {
   font-family: "Arial", sans-serif;
   font-size: 1rem;
   white-space: pre-line;
-  /* Remove margin-top to fix the vertical positioning */
-  /* margin-top: 3rem; Remove this line */
-  max-width: 600px;
+  max-width: 500px;
+  margin-top: 1rem; /* Add margin-top for separation */
 }
 
 .fontLight {
@@ -30,16 +27,14 @@
   font-size: 0.8rem;
   max-height: 300px;
   overflow-y: auto;
-  /* Add padding to the long bio for better readability */
-  padding: 1rem; /* Adjust as needed */
+  padding: 1rem;
 }
 
 .buttonGroup {
   display: flex;
   justify-content: center;
-  /* Adjust margin-top to position the button group */
-  margin-top: 1rem; /* Adjust this value as needed */
-  margin-bottom: 1rem; /* Add margin to create space between bio text and buttons */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .button {
@@ -55,4 +50,15 @@
 
 .button.active {
   background-color: var(--button-active-bg-color);
+}
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .bioContainer {
+    flex-direction: column; /* Change flex-direction to column for smaller screens */
+    align-items: flex-start; /* Align content to the start of the container */
+  }
+
+  .buttonGroup {
+    margin-top: 1rem; /* Add margin for separation */
+  }
 }

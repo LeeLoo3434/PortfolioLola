@@ -1,18 +1,20 @@
 /* ProfileCarousel.module.css */
 
+/* Base styles for larger screens */
 .polaroid {
   position: relative;
-  width: 300px;
-  height: 400px;
+  max-width: 300px;
+  margin: 0 auto;
   padding: 1rem;
   background-color: var(--card-bg-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-} 
+  padding-top: 20px; /* Add padding to the top to create space */
+}
 
 .image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -64,4 +66,47 @@
 .location {
   font-size: 1rem;
   font-weight: normal;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .polaroid {
+    max-width: 100%; /* Adjust maximum width for smaller screens */
+  }
+  .image {
+    width: 100%; /* Make sure the image scales to fit the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .text {
+    font-size: 1rem !important; /* Reduce font size for text and add !important */
+  }
+
+  .name {
+    font-size: 1.2rem !important; /* Reduce font size for name and add !important */
+  }
+
+  .role {
+    font-size: 0.9rem !important; /* Reduce font size for role and add !important */
+  }
+
+  .marker {
+    font-size: 0.9rem !important; /* Reduce font size for marker and add !important */
+  }
+
+  .location {
+    font-size: 0.9rem !important; /* Reduce font size for location and add !important */
+  }
+
+  .textContainer {
+    padding: 0.5rem !important; /* Reduce padding for text container and add !important */
+  }
+}
+
+/* Media query for adjusting width on smaller desktop screens */
+@media (max-width: 1024px) {
+  .polaroid {
+    width: 100%; /* Adjust the width for screens up to 1024px width */
+  }
 }

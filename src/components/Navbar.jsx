@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../ThemeContext';
 import ToggleButton from './ToggleButton'; // Import the ToggleButton component
-import '../styles.css'; // Import your custom CSS styles
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
     const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
