@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react';
-import cali from "../images/cali.jpeg";
 import lolaaspen from "../images/lolaaspen.jpeg";
-import ramen from "../images/gay.jpeg";
+import ramen from "../images/ramen.jpeg";
+import rome from "../images/rome.jpeg";
 import styles from "./ProfileCarousel.module.css";
 import { ThemeContext } from '../ThemeContext';
 
-const images = [cali, lolaaspen, ramen];
+const images = [ lolaaspen, ramen, rome];
 
 export default function ProfileCarousel() {
   const { isDarkMode } = useContext(ThemeContext);

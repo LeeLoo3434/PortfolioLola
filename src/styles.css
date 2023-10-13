@@ -32,7 +32,9 @@ body {
 .container {
     display: flex;
     justify-content: center;
+    .carouselMarging{margin-top: 6rem;}
     align-items: center;
+    flex-wrap: wrap;
     height: 100vh;
     padding: 2rem;
     box-sizing: border-box;

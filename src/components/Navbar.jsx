@@ -44,7 +44,7 @@ const Navbar = () => {
                 <div>
                     <Link
                         to="/"
-                        style={{ color: textColor, textDecoration: 'none', marginBottom: '10px', fontSize: '1rem', marginRight: '20px' }}
+                        style={{ color: textColor, textDecoration: 'none', marginBottom: '10px', fontSize: '1rem', marginRight: '20px', marginLeft: '20px' }}
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         Home

@@ -31,7 +31,7 @@ export default function Dashboard() {
       <div className={`${containerClassName} custom-container`}>
         <div className={styles.twoColumnContainer}>
           {/* Left Column (ProfileCarousel) */}
-          <div className={styles.carouselColumn}>
+          <div className={`${styles.carouselColumn}carouselMarging`}>
             <ProfileCarousel className="w-full" />
           </div>
 

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./Bio.module.css";
 import { ThemeContext } from "../ThemeContext";
 
-const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick }) => {
+const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick, showExploreButton}) => {
   const { isDarkMode } = useContext(ThemeContext);
 
   const textClassName = isDarkMode ? styles.textDark : styles.textLight;
@@ -36,7 +36,10 @@ const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick }) => {
           ) : (
             <>
               <h2>Long Bio</h2>
-              <p className={`${styles.text} ${textClassName}`}>{bioContent}</p>
+              <p className={`${styles.text} ${textClassName} ${!showShortBio ? styles.longBio : ''}`}>
+  {bioContent}
+</p>
+
             </>
           )}
         </div>
