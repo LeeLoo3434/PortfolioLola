@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import ToggleButton from '../components/ToggleButton';
 import { ThemeContext } from '../ThemeContext';
 import Navbar from '../components/Navbar'; // Import the Navbar component

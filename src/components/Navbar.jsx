@@ -2,10 +2,9 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../ThemeContext';
 import ToggleButton from './ToggleButton'; // Import the ToggleButton component
-import styles from './Navbar.module.css';
 
 const Navbar = () => {
-    const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+    const { isDarkMode } = useContext(ThemeContext); // Removed the "toggleDarkMode" variable
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleMobileMenu = () => {
@@ -13,7 +12,7 @@ const Navbar = () => {
     };
 
     const navBackgroundColor = isDarkMode ? '#333' : '#D8BFD8';
-    const textColor = isDarkMode ? '#D8BFD8' : 'black';
+    const textColor = isDarkMode ? 'lavender' : 'black';
 
     // Define mobileMenuStyles here
     const mobileMenuStyles = {
@@ -65,8 +64,7 @@ const Navbar = () => {
                             textDecoration: 'none',
                             marginBottom: '10px',
                             fontSize: '1.3rem', // Larger font size
-                            marginRight: '20px',
-                            marginLeft: '20px',
+                            margin: '0 20px', // Add margin here
                         }}
                         onClick={() => setMobileMenuOpen(false)}
                     >
@@ -79,7 +77,7 @@ const Navbar = () => {
                             textDecoration: 'none',
                             marginBottom: '10px',
                             fontSize: '1.3rem', // Larger font size
-                            marginRight: '20px',
+                            margin: '0 20px', // Add margin here
                         }}
                         onClick={() => setMobileMenuOpen(false)}
                     >
@@ -92,7 +90,7 @@ const Navbar = () => {
                             textDecoration: 'none',
                             marginBottom: '10px',
                             fontSize: '1.3rem', // Larger font size
-                            marginRight: '20px',
+                            margin: '0 20px', // Add margin here
                         }}
                         onClick={() => setMobileMenuOpen(false)}
                     >

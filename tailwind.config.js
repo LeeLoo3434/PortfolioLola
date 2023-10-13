@@ -1,5 +1,9 @@
 module.exports = {
-  content: [],
+  content: [
+    './src/**/*.js',
+    './public/index.html',
+    // Add other source files you want to scan
+  ],
   theme: {
     extend: {
       colors: {
@@ -10,5 +14,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('postcss-nesting'), // Enable CSS nesting before tailwindcss
+    require('tailwindcss'), // Keep this line
+    // Add other Tailwind CSS plugins if needed
+  ],
 };

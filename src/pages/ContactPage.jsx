@@ -17,7 +17,7 @@ const ContactPage = () => {
 
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
                 <div className='max-w-[600px]' style={{ background: isDarkMode ? '#374151' : '#ffffff', padding: '2rem', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2)' }}>
-                    <form name='contact' method='post' data-netlify='true' data-netlify-honeypot='bot-field'>
+                    <form name='contact' method='post' data-netlify='true' data-netlify-honeypot='bot-field' action='/thanks/'>
                         <input type='hidden' name='form-name' value='contact' />
                         <div style={{ margin: '1rem 0' }}>
                             <label htmlFor='name' style={{ fontSize: '1rem', color: 'black', width: '80px', display: 'inline-block' }}>
