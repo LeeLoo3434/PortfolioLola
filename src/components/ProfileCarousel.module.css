@@ -74,6 +74,7 @@
   /* Adjust styles for smaller screens */
   .polaroid {
     max-width: 100%; /* Adjust maximum width for smaller screens */
+
   }
   .image {
     width: 100%; /* Make sure the image scales to fit the container */
@@ -81,7 +82,7 @@
   }
 
   .text {
-    font-size: 1rem !important; /* Reduce font size for text and add !important */
+    font-size: .8rem !important; /* Reduce font size for text and add !important */
   }
 
   .name {
@@ -101,7 +102,7 @@
   }
 
   .textContainer {
-    padding: 0.5rem !important; /* Reduce padding for text container and add !important */
+    padding: 0.2rem !important; /* Reduce padding for text container and add !important */
   }
 }
 

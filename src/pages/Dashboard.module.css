@@ -46,7 +46,7 @@
 
 /* Styling for the Explore Projects button */
 .exploreButton {
-    background: linear-gradient(to bottom, #007bff, #0056b3); /* Blue gradient */
+    background: linear-gradient(to bottom, #D8BFD8, #A37Ea4); 
     color: white;
     border: none;
     border-radius: 50%; /* Circular button */
@@ -54,10 +54,10 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
-    margin-bottom: 20px; /* Adjust the margin as needed */
+
 }
 .socialIcons {
-    margin-top: 10px; /* Adjust the margin as needed to move icons closer to the button */
+    margin-top: 15px /* Adjust the margin as needed to move icons closer to the button */
 }
 
 /* Add spacing between the icons */

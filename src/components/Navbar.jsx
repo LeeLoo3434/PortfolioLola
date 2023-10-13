@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../ThemeContext';
 import ToggleButton from './ToggleButton'; // Import the ToggleButton component
-import styles from "./Navbar.module.css";
+import styles from './Navbar.module.css';
 
 const Navbar = () => {
     const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
@@ -12,9 +12,10 @@ const Navbar = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
-    const navBackgroundColor = isDarkMode ? '#333' : '#007bff';
-    const textColor = isDarkMode ? 'white' : 'black';
+    const navBackgroundColor = isDarkMode ? '#333' : '#D8BFD8';
+    const textColor = isDarkMode ? '#D8BFD8' : 'black';
 
+    // Define mobileMenuStyles here
     const mobileMenuStyles = {
         display: mobileMenuOpen ? 'flex' : 'none',
         flexDirection: 'column',
@@ -28,11 +29,26 @@ const Navbar = () => {
     };
 
     return (
-        <nav style={{ backgroundColor: navBackgroundColor, padding: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative' }}>
+        <nav
+            style={{
+                backgroundColor: navBackgroundColor,
+                padding: '15px', // Increased padding
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                position: 'relative',
+            }}
+        >
             <div style={{ display: 'flex', alignItems: 'center' }}>
                 <button
                     onClick={toggleMobileMenu}
-                    style={{ color: textColor, backgroundColor: 'transparent', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}
+                    style={{
+                        color: textColor,
+                        backgroundColor: 'transparent',
+                        border: 'none',
+                        fontSize: '1.8rem', // Larger font size
+                        cursor: 'pointer',
+                    }}
                 >
                     {mobileMenuOpen ? (
                         <i className="fas fa-times"></i>
@@ -44,20 +60,87 @@ const Navbar = () => {
                 <div>
                     <Link
                         to="/"
-                        style={{ color: textColor, textDecoration: 'none', marginBottom: '10px', fontSize: '1rem', marginRight: '20px', marginLeft: '20px' }}
+                        style={{
+                            color: textColor,
+                            textDecoration: 'none',
+                            marginBottom: '10px',
+                            fontSize: '1.3rem', // Larger font size
+                            marginRight: '20px',
+                            marginLeft: '20px',
+                        }}
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         Home
                     </Link>
                     <Link
                         to="/projects"
-                        style={{ color: textColor, textDecoration: 'none', marginBottom: '10px', fontSize: '1rem', marginRight: '20px' }}
+                        style={{
+                            color: textColor,
+                            textDecoration: 'none',
+                            marginBottom: '10px',
+                            fontSize: '1.3rem', // Larger font size
+                            marginRight: '20px',
+                        }}
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         Projects
                     </Link>
-                    {/* Add more links as needed */}
+                    <Link
+                        to="/contact"
+                        style={{
+                            color: textColor,
+                            textDecoration: 'none',
+                            marginBottom: '10px',
+                            fontSize: '1.3rem', // Larger font size
+                            marginRight: '20px',
+                        }}
+                        onClick={() => setMobileMenuOpen(false)}
+                    >
+                        Contact
+                    </Link>
                 </div>
+            </div>
+            {/* Apply mobileMenuStyles to the mobile menu */}
+            <div
+                style={mobileMenuStyles}
+                className={mobileMenuOpen ? 'mobile-menu active' : 'mobile-menu'}
+            >
+                <Link
+                    to="/"
+                    style={{
+                        color: textColor,
+                        textDecoration: 'none',
+                        fontSize: '1.3rem', // Larger font size
+                        margin: '10px',
+                    }}
+                    onClick={() => setMobileMenuOpen(false)}
+                >
+                    Home
+                </Link>
+                <Link
+                    to="/projects"
+                    style={{
+                        color: textColor,
+                        textDecoration: 'none',
+                        fontSize: '1.3rem', // Larger font size
+                        margin: '10px',
+                    }}
+                    onClick={() => setMobileMenuOpen(false)}
+                >
+                    Projects
+                </Link>
+                <Link
+                    to="/contact"
+                    style={{
+                        color: textColor,
+                        textDecoration: 'none',
+                        fontSize: '1.3rem', // Larger font size
+                        margin: '10px',
+                    }}
+                    onClick={() => setMobileMenuOpen(false)}
+                >
+                    Contact
+                </Link>
             </div>
             <div>
                 <ToggleButton />

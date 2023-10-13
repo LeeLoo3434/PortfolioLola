@@ -1,7 +1,7 @@
 /* Navbar.module.css */
 
 .navbar {
-    background-color: #007bff;
+    background-color: #0b0b0c;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@
 }
 
 .nav-link {
-    color: white;
+    color: #D8BFD8;
     text-decoration: none;
     margin-right: 20px;
     font-size: 1rem;
@@ -42,7 +42,7 @@
     top: 60px;
     /* Adjust the top value as needed */
     right: 0;
-    background-color: #007bff;
+    background-color: #202123;
     width: 100%;
     padding: 10px;
     z-index: 1000; /* Adjust the z-index value as needed */

@@ -4,23 +4,24 @@
 
 :root {
     /* Default light mode colors */
-    --bg-color: #f7fafc;
-    --card-bg-color: #ffffff;
-    --text-color: #000000;
-    --button-bg-color: #007bff; /* Define your button colors */
-    --button-text-color: #ffffff;
-    --button-active-bg-color: #0056b3;
+    --bg-color: #F4F4F4; /* Light gray background */
+    --card-bg-color: #c5b6b6; /* White card background */
+    --text-color: #333333; /* Dark gray text */
+    --button-bg-color: #007bff; /* Blue button background */
+    --button-text-color: #FFFFFF; /* White button text */
+    --button-active-bg-color: #0056b3; /* Darker blue for active button */
 }
 
 [data-theme="dark"] {
     /* Dark mode colors */
-    --bg-color: #1f2937;
-    --card-bg-color: #374151;
-    --text-color: #f9fafb;
-    --button-bg-color: #007bff; /* Define your dark mode button colors */
-    --button-text-color: #ffffff;
-    --button-active-bg-color: #0056b3;
+    --bg-color: #121212; /* Dark background */
+    --card-bg-color: #1E1E1E; /* Slightly lighter card background */
+    --text-color: #FFFFFF; /* White text on dark background */
+    --button-bg-color: #007bff; /* Blue button background */
+    --button-text-color: #FFFFFF; /* White button text */
+    --button-active-bg-color: #0056b3; /* Darker blue for active button */
 }
+
 
 /* Apply the custom properties to the appropriate elements */
 body {

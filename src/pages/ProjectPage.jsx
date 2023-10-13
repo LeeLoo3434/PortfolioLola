@@ -19,7 +19,7 @@ const projects = [
   {
     title: "SpeakEasy",
     description: "Built with Python, Django, PostgreSQL, HTML, and CSS",
-    link: "https://speakeasy123.herokuapp.com/"
+    link: "https://github.com/LeeLoo3434/speakeasy"
   }
 ];
 
@@ -54,7 +54,7 @@ const ProjectPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  backgroundColor: '#3f83f8',
+                  backgroundColor: '#D8BFD8',
                   color: '#ffffff',
                   padding: '0.5rem 1rem',
                   borderRadius: '9999px',
