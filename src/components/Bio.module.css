@@ -1,4 +1,6 @@
-/* Default styles for larger screens (e.g., desktop) */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 .container {
   display: flex;
   flex-direction: column; /* Change flex-direction to column */

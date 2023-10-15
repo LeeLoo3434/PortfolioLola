@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../ThemeContext';
 import ToggleButton from './ToggleButton'; // Import the ToggleButton component
-
+import '../styles.css';
 const Navbar = () => {
     const { isDarkMode } = useContext(ThemeContext); // Removed the "toggleDarkMode" variable
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

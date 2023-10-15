@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../ThemeContext';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import styles from "./ToggleButton.module.css";
 
 const ToggleButton = () => {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -12,13 +11,13 @@ const ToggleButton = () => {
   };
 
   const buttonClassName = isDarkMode
-    ? `${styles.toggleButton} ${styles.darkModeButton}`
-    : `${styles.toggleButton} ${styles.lightModeButton}`;
+    ? "bg-gray-800 text-white"
+    : "bg-white text-gray-800";
 
   return (
-    <div className={buttonClassName} onClick={handleToggle}>
-      <div className={styles.slider}>
-        <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className={styles.icon} />
+    <div className={`rounded-full p-2 cursor-pointer z-10 ${buttonClassName}`} onClick={handleToggle}>
+      <div className="relative w-14 h-7 flex items-center justify-between rounded-full">
+        <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className="text-2xl font-bold" />
       </div>
     </div>
   );

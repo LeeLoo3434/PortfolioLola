@@ -1,22 +1,9 @@
-module.exports = {
-  content: [
-    './src/**/*.js',
-    './public/index.html',
-    // Add other source files you want to scan
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        primary: '#FF0000', // Example custom color
-      },
-      borderRadius: {
-        xl: '1rem', // Example custom border radius
-      },
-    },
+    extend: {},
   },
-  plugins: [
-    require('postcss-nesting'), // Enable CSS nesting before tailwindcss
-    require('tailwindcss'), // Keep this line
-    // Add other Tailwind CSS plugins if needed
-  ],
-};
+  plugins: [],
+}
