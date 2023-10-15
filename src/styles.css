@@ -22,7 +22,6 @@
     --button-active-bg-color: #0056b3; /* Darker blue for active button */
 }
 
-
 /* Apply the custom properties to the appropriate elements */
 body {
     background-color: var(--bg-color);
@@ -33,7 +32,6 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    .carouselMarging{margin-top: 6rem;}
     align-items: center;
     flex-wrap: wrap;
     height: 100vh;
