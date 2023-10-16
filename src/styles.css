@@ -9,13 +9,6 @@ body {
     margin: 0;
 }
 
-.mobile-menu {
-    display: none;
-}
-
-.mobile-menu.active {
-    display: block;
-}
 
 .container {
     display: flex;
@@ -23,7 +16,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     height: 100vh;
-    /* margin: 0px 200px 0px 200px; */
 }
 
 /* Media queries for responsiveness */

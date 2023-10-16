@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-
 import { useForm } from '@formcarry/react';
 import Navbar from '../components/Navbar';
 import '../styles.css';

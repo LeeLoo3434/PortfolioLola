@@ -75,7 +75,7 @@
   /* Adjust styles for smaller screens */
   .polaroid {
     max-width: 100%; /* Adjust maximum width for smaller screens */
-max-height: 50;
+    max-height: 50%;
   }
   .image {
     width: 100%; /* Make sure the image scales to fit the container */
