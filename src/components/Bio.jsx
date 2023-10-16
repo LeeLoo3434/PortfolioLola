@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./Bio.module.css";
 import { ThemeContext } from "../ThemeContext";
 
-const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick, showExploreButton}) => {
+const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick, showExploreButton }) => {
   const { isDarkMode } = useContext(ThemeContext);
 
   const textClassName = isDarkMode ? styles.textDark : styles.textLight;
@@ -16,13 +16,13 @@ const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick, showExplor
         <div className={styles.buttonGroup}>
           <button
             onClick={handleShortBioClick}
-            className={`${styles.button} ${showShortBio ? styles.active : ""}`}
+            className={`md:mr-3 ${styles.button} ${showShortBio ? styles.active : ""}`}
           >
             Short
           </button>
           <button
             onClick={handleLongBioClick}
-            className={`${styles.button} ${!showShortBio ? styles.active : ""}`}
+            className={`md:ml-3 ${styles.button} ${!showShortBio ? styles.active : ""}`}
           >
             Long
           </button>
@@ -36,10 +36,13 @@ const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick, showExplor
           ) : (
             <>
               <h2>Long Bio</h2>
-              <p className={`${styles.text} ${textClassName} ${!showShortBio ? styles.longBio : ''}`}>
-  {bioContent}
-</p>
-
+              <p
+                className={`sm:text-sm md:text-base ${styles.text} ${textClassName} ${
+                  !showShortBio ? styles.longBio : ""
+                }`}
+              >
+                {bioContent}
+              </p>
             </>
           )}
         </div>
@@ -49,4 +52,3 @@ const Bio = ({ showShortBio, handleShortBioClick, handleLongBioClick, showExplor
 };
 
 export default Bio;
-

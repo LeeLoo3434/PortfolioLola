@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import ToggleButton from '../components/ToggleButton';
+
 import { useForm } from '@formcarry/react';
 import Navbar from '../components/Navbar';
 import '../styles.css';
 import { ThemeContext } from '../ThemeContext';
 
 function ContactPage() {
-    const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+    const { isDarkMode } = useContext(ThemeContext);
     const { state, submit } = useForm({ id: 'ffyjh6_Bu6' });
 
     if (state.submitted) {
@@ -25,7 +25,7 @@ function ContactPage() {
         >
             <Navbar />
             <div style={{ padding: '1rem' }}>
-                <ToggleButton onClick={toggleDarkMode} />
+
             </div>
             <h1
                 style={{

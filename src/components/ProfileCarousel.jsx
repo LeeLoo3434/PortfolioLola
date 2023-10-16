@@ -34,7 +34,7 @@ export default function ProfileCarousel() {
         <img
           src={images[currentImage]}
           alt=""
-          className={styles.image}
+          className={`${styles.image} fixed-image-size`} 
         />
         <div className={styles.textContainer}>
           <div className={styles.name}>

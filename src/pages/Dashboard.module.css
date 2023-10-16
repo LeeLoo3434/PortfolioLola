@@ -70,15 +70,21 @@
 }
 
 /* Media query for responsiveness */
+/* Media query for responsiveness */
 @media (max-width: 768px) {
-
     /* Stack columns on top of each other for smaller screens */
     .twoColumnContainer {
         flex-direction: column;
+        align-items: center; 
     }
 
     /* Full width for the Carousel column */
     .carouselColumn {
         max-width: 100%;
+    }
+
+    /* Center text within the Bio column */
+    .column {
+        text-align: center;
     }
 }

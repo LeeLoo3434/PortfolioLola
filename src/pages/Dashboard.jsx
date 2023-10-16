@@ -29,19 +29,18 @@ export default function Dashboard() {
     <div>
       <Navbar />
       <div className={`${containerClassName} custom-container`}>
-        <div className={styles.twoColumnContainer}>
-          {/* Left Column (ProfileCarousel) */}
-          <div className={`${styles.carouselColumn}carouselMarging`}>
-            <ProfileCarousel className="w-full" />
-          </div>
-
-          {/* Right Column (Bio) */}
-          <div className={`${styles.column} ${bioClassName}`}>
-            <Bio
-              showShortBio={showShortBio}
-              handleShortBioClick={handleShortBioClick}
-              handleLongBioClick={handleLongBioClick}
-            />
+      <div className={styles.twoColumnContainer}>
+        {/* Left Column (ProfileCarousel) */}
+        <div className={`${styles.carouselColumn}carouselMarging`}>
+      <ProfileCarousel className="w-full" />
+        </div>
+        {/* Right Column (Bio) */}
+      <div className={`${styles.column} ${bioClassName}`}>
+      <Bio
+        showShortBio={showShortBio}
+        handleShortBioClick={handleShortBioClick}
+        handleLongBioClick={handleLongBioClick}
+      />
             {/* Move the Explore Projects button inside the Bio component */}
             <div className={styles.exploreButtonContainer}>
               <Link to="/projects">
