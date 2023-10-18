@@ -34,7 +34,7 @@ function ContactPage() {
                     marginTop: '6rem',
                 }}
             >
-                Let's Connect <span role="img" aria-label="speech bubble">💬</span>
+                Let's Connect 💬
             </h1>
 
             <div

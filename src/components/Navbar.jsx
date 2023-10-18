@@ -4,7 +4,7 @@ import { ThemeContext } from '../ThemeContext';
 import ToggleButton from './ToggleButton'; // Import the ToggleButton component
 
 const Navbar = () => {
-    const { isDarkMode } = useContext(ThemeContext); // Removed the "toggleDarkMode" variable
+    const { isDarkMode } = useContext(ThemeContext);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleMobileMenu = () => {
@@ -14,24 +14,11 @@ const Navbar = () => {
     const navBackgroundColor = isDarkMode ? '#333' : '#D8BFD8';
     const textColor = isDarkMode ? 'lavender' : 'black';
 
-    // Define mobileMenuStyles here
-    const mobileMenuStyles = {
-        display: mobileMenuOpen ? 'flex' : 'none',
-        flexDirection: 'column',
-        alignItems: 'center',
-        position: 'absolute',
-        top: '60px', // Adjust the top value as needed
-        right: '0',
-        backgroundColor: navBackgroundColor,
-        width: '100%',
-        padding: '10px',
-    };
-
     return (
         <nav
             style={{
                 backgroundColor: navBackgroundColor,
-                padding: '15px', // Increased padding
+                padding: '15px',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
@@ -45,7 +32,7 @@ const Navbar = () => {
                         color: textColor,
                         backgroundColor: 'transparent',
                         border: 'none',
-                        fontSize: '1.8rem', // Larger font size
+                        fontSize: '1.8rem',
                         cursor: 'pointer',
                     }}
                 >
@@ -55,90 +42,78 @@ const Navbar = () => {
                         <i className="fas fa-bars"></i>
                     )}
                 </button>
-                {/* Left-aligned items */}
                 <div>
-                    <Link
-                        to="/"
+                    {/* This is the dropdown menu */}
+                    <div
                         style={{
-                            color: textColor,
-                            textDecoration: 'none',
-                            marginBottom: '10px',
-                            fontSize: '1.3rem', // Larger font size
-                            margin: '0 20px', // Add margin here
+                            position: 'relative',
+                            display: 'inline-block',
                         }}
-                        onClick={() => setMobileMenuOpen(false)}
                     >
-                        Home
-                    </Link>
-                    <Link
-                        to="/projects"
-                        style={{
-                            color: textColor,
-                            textDecoration: 'none',
-                            marginBottom: '10px',
-                            fontSize: '1.3rem', // Larger font size
-                            margin: '0 20px', // Add margin here
-                        }}
-                        onClick={() => setMobileMenuOpen(false)}
-                    >
-                        Projects
-                    </Link>
-                    <Link
-                        to="/contact"
-                        style={{
-                            color: textColor,
-                            textDecoration: 'none',
-                            marginBottom: '10px',
-                            fontSize: '1.3rem', // Larger font size
-                            margin: '0 20px', // Add margin here
-                        }}
-                        onClick={() => setMobileMenuOpen(false)}
-                    >
-                        Contact
-                    </Link>
+                        <button
+                            onClick={toggleMobileMenu}
+                            style={{
+                                color: textColor,
+                                backgroundColor: 'transparent',
+                                border: 'none',
+                                fontSize: '1.3rem',
+                                cursor: 'pointer',
+                                margin: '0 20px',
+                            }}
+                        >
+                            Menu
+                        </button>
+                        {mobileMenuOpen && (
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    top: '100%',
+                                    left: '0',
+                                    backgroundColor: navBackgroundColor,
+                                    minWidth: '160px',
+                                    zIndex: '1',
+                                }}
+                            >
+                                <Link
+                                    to="/"
+                                    style={{
+                                        color: textColor,
+                                        textDecoration: 'none',
+                                        display: 'block',
+                                        padding: '10px',
+                                    }}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Home
+                                </Link>
+                                <Link
+                                    to="/projects"
+                                    style={{
+                                        color: textColor,
+                                        textDecoration: 'none',
+                                        display: 'block',
+                                        padding: '10px',
+                                    }}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Projects
+                                </Link>
+                                <Link
+                                    to="/contact"
+                                    style={{
+                                        color: textColor,
+                                        textDecoration: 'none',
+                                        display: 'block',
+                                        padding: '10px',
+                                    }}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Contact
+                                </Link>
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>
-            {/* Apply mobileMenuStyles to the mobile menu */}
-            <div
-                style={mobileMenuStyles}
-                className={mobileMenuOpen ? 'mobile-menu active' : 'mobile-menu'}
-            >
-                <Link
-                    to="/"
-                    style={{
-                        color: textColor,
-                        textDecoration: 'none',
-                        fontSize: '1.3rem', // Larger font size
-                        margin: '10px',
-                    }}
-                    onClick={() => setMobileMenuOpen(false)}
-                >
-                    Home
-                </Link>
-                <Link
-                    to="/projects"
-                    style={{
-                        color: textColor,
-                        textDecoration: 'none',
-                        fontSize: '1.3rem', // Larger font size
-                        margin: '10px',
-                    }}
-                    onClick={() => setMobileMenuOpen(false)}
-                >
-                    Projects
-                </Link>
-                <Link
-                    to="/contact"
-                    style={{
-                        color: textColor,
-                        textDecoration: 'none',
-                        fontSize: '1.3rem', // Larger font size
-                        margin: '10px',
-                    }}
-                    onClick={() => setMobileMenuOpen(false)}
-                >
-                    Contact
-                </Link>
             </div>
             <div>
                 <ToggleButton />

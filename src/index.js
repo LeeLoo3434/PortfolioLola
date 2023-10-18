@@ -1,13 +1,14 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from './App';
 import './styles.css';
 import { ThemeProvider } from './ThemeContext';
 
-createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
       <App />
     </ThemeProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
