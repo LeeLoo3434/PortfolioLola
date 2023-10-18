@@ -1,8 +1,16 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@layer base {
+    /* Tailwind's base styles will automatically be injected here */
+}
 
-/* Apply the custom properties to the appropriate elements */
+@layer components {
+    /* Tailwind's component styles will automatically be injected here */
+}
+
+@layer utilities {
+    /* Tailwind's utility styles will automatically be injected here */
+}
+
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -18,7 +26,6 @@ body {
     height: 100vh;
 }
 
-/* Media queries for responsiveness */
 
 @media (max-width: 768px) {
     .container {

@@ -1,6 +1,15 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@layer base {
+  /* Tailwind's base styles will automatically be injected here */
+}
+
+@layer components {
+  /* Tailwind's component styles will automatically be injected here */
+}
+
+@layer utilities {
+  /* Tailwind's utility styles will automatically be injected here */
+}
+
 .container {
   display: flex;
   flex-direction: column; /* Change flex-direction to column */

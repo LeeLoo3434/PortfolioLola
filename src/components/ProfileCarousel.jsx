@@ -5,6 +5,7 @@ import rome from "../images/rome.jpeg";
 import styles from "./ProfileCarousel.module.css";
 import { ThemeContext } from '../ThemeContext';
 
+
 const images = [ lolaaspen, ramen, rome];
 
 export default function ProfileCarousel() {
@@ -43,7 +44,9 @@ export default function ProfileCarousel() {
           </div>
           <div className={styles.location}>
             <div className={styles.markerContainer}>
-              <div className={`${styles.text} ${markerClassName}`}>📍</div>
+            <div className={`${styles.text} ${markerClassName}`}>
+    <span role="img" aria-label="location marker">📍</span>
+</div>
               <div className={`${styles.text} ${locationClassName}`}>Los Angeles</div>
             </div>
           </div>

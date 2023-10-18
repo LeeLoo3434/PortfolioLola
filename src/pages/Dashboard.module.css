@@ -1,7 +1,14 @@
-/* Dashboard.module.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@layer base {
+    /* Tailwind's base styles will automatically be injected here */
+}
+
+@layer components {
+    /* Tailwind's component styles will automatically be injected here */
+}
+
+@layer utilities {
+    /* Tailwind's utility styles will automatically be injected here */
+}
 
 /* Default styles */
 .container {
@@ -49,18 +56,21 @@
 
 /* Styling for the Explore Projects button */
 .exploreButton {
-    background: linear-gradient(to bottom, #D8BFD8, #A37Ea4); 
+    background: linear-gradient(to bottom, #D8BFD8, #A37Ea4);
     color: white;
     border: none;
-    border-radius: 50%; /* Circular button */
+    border-radius: 50%;
+    /* Circular button */
     padding: 15px 15px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
 
 }
+
 .socialIcons {
-    margin-top: 15px /* Adjust the margin as needed to move icons closer to the button */
+    margin-top: 15px;
+        /* Adjust the margin as needed to move icons closer to the button */
 }
 
 /* Add spacing between the icons */
@@ -72,10 +82,11 @@
 /* Media query for responsiveness */
 /* Media query for responsiveness */
 @media (max-width: 768px) {
+
     /* Stack columns on top of each other for smaller screens */
     .twoColumnContainer {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
     }
 
     /* Full width for the Carousel column */

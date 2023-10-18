@@ -1,5 +1,3 @@
-/* ProfileCarousel.module.css */
-
 
 /* Base styles for larger screens */
 .polaroid {
@@ -35,7 +33,7 @@
 }
 
 .text {
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Permanent Marker', cursive;
   font-size: 1.2rem;
   color: var(--text-color);
   white-space: nowrap;
