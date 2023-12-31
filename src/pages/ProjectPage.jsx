@@ -18,6 +18,17 @@ const projects = [
     title: "SpeakEasy",
     description: "Built with Python, Django, PostgreSQL, HTML, and CSS",
     link: "https://github.com/LeeLoo3434/speakeasy"
+  },
+
+  {
+    title: "FungiCollector - Mushroom Collection App",
+    description: "App for users to upload photos, log mushroom collections. Technologies: Python3, Django, PostgreSQL.",
+    link: "https://github.com/LeeLoo3434/FungiCollector"
+  },
+  {
+    title: "The Cozy Corner App",
+    description: "Connects the Queer community through local events. Technologies: Python, Flask, MySQL Workbench.",
+    link: "https://github.com/LeeLoo3434/The_cozy_corner"
   }
 ];
 
