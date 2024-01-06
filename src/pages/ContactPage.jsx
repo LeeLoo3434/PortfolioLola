@@ -31,7 +31,7 @@ function ContactPage() {
                     fontSize: '1.5rem',
                     fontWeight: 'bold',
                     textAlign: 'center',
-                    marginTop: '6rem',
+                    marginTop: '2rem',
                 }}
             >
                 Let's Connect 💬
